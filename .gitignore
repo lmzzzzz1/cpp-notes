@@ -34,4 +34,5 @@
 # cmakefile
 CMakeLists.txt
 cmake-build-debug/
+.idea/
 main.cpp

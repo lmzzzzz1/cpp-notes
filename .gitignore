@@ -34,5 +34,8 @@
 # cmakefile
 CMakeLists.txt
 cmake-build-debug/
-.idea/
 main.cpp
+
+# ide configuration
+.vscode/
+.idea/

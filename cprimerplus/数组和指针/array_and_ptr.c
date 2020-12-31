@@ -20,6 +20,9 @@ void sum5d(int(*ar)[12][2][2][12], int rows);
 void vla_sum(int rows, int cols, int array[rows][cols]);
 void vla_sum_no_para(int, int, int arr[*][*]);
 
+// 复合字面量
+void compound_literal();
+
 int main(int argc, char *argv[]) {
     //    initial();
     array_and_ptr();
@@ -128,5 +131,17 @@ void vla(void) {
 }
 
 void vla_sum(int rows, int cols, int array[rows][cols]) {
+
+}
+
+void compound_literal(){
+    // 普通数组
+    int diva[2] = {1,2};
+    // 匿名数组
+    (int[2]) {1,2};
+    // also
+    (int[]) {1,2,3,4};
+
+    int *pt1 = (int[2]) {1,2};
 
 }

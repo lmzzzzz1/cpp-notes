@@ -38,7 +38,7 @@ int auto_main(void)
 
 // =================================================================
 // 2. 寄存器变量register
-int register_main()
+static int register_main()
 {   
     // register变量和auto变量很像，初始值都是垃圾值
     // 会试图向编译器申请存放在寄存器中，从而不能得到他的内存地址
@@ -69,9 +69,9 @@ static int svil = 1;
 // 4. 外部变量extern
 int Errupt; // 外部变量会自动初始化为0
 int a = 1;
-// int b = 2 * a; // 外部变量只能使用常量表达式来初始化化
+// int b = 2 * a; // 外部变量只能使用常量表达式来初始化
 double Up[100];
-extern int Coal; // 引用型声明一个外部变量，虽然外部变量对全程序可见，但使用之前必须要先extern声明一下。
+// extern int Coal; // 引用型声明一个外部变量，虽然外部变量对全程序可见，但使用之前必须要先extern声明一下。
 
 void extern_main()
 {
@@ -79,14 +79,14 @@ void extern_main()
     extern double Up[]; // 不需要声明大小，因为前面已经定义过了
 
     Errupt += Up[0];
-    printf("extern int Coal is initial as %d\n", Coal);
+    printf("extern int Errupt is initial as %d\n", Errupt);
 }
 
 
 // ===============================main==============================
 int main(){
     auto_main();
-    register_main();
+    register_main();    
 
     static_main();
     static_main();

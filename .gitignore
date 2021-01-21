@@ -39,3 +39,4 @@ main.cpp
 # ide configuration
 .vscode/
 .idea/
+*.DS_Store
